@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:res="clr-namespace:XamApp.Resources"
+             x:Class="XamApp.Views.IdentificationView">
+    <ContentPage.Resources>
+        <Style x:Key="FrameStyle" TargetType="Frame">
+            <Setter Property="CornerRadius" Value="10"></Setter>
+            <Setter Property="BorderColor" Value="DarkGray"></Setter>
+            <Setter Property="HorizontalOptions" Value="Center"></Setter>
+            <Setter Property="HasShadow" Value="True"></Setter>
+        </Style>
+        <Style x:Key="EntryStyle" TargetType ="Entry">
+            <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+            <Setter Property="VerticalOptions" Value="FillAndExpand"></Setter>
+            <Setter Property="MaxLength" Value="1"></Setter>
+            <Setter Property="Keyboard" Value="Numeric"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+        </Style>
+        <Style x:Key="GreenBtn" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Chartreuse"></Setter>
+            <Setter Property="BorderColor" Value="LimeGreen"></Setter>
+            <Setter Property="CornerRadius" Value="10"></Setter>
+            <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="WidthRequest" Value="200"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+        </Style>
+       
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" 
+                     Margin="10,20,10,20"
+                     HorizontalOptions="Center">
+            <Image Source="{res:ImageResource XamApp.Resources.drawable.melkradar.png}" >
+                <Image.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android,iOS" Value="60" />
+                        <On Platform=" UWP" Value="60" />
+                    </OnPlatform>
+                </Image.WidthRequest>
+                <Image.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android,iOS" Value="30" />
+                        <On Platform=" UWP" Value="30" />
+                    </OnPlatform>
+                </Image.HeightRequest>
+            </Image>
+            <Image Source="{res:ImageResource XamApp.Resources.drawable.cell.PNG}"  Margin="0,40,0,10">
+                <Image.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android,iOS" Value="60" />
+                        <On Platform=" UWP" Value="60" />
+                    </OnPlatform>
+                </Image.WidthRequest>
+                <Image.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android,iOS" Value="80" />
+                        <On Platform=" UWP" Value="80" />
+                    </OnPlatform>
+                </Image.HeightRequest>
+            </Image>
+            <Label Text="کد ارسال شده را اینجا وارد کنید" 
+                   HorizontalTextAlignment="Center" 
+                   Margin="0,0,0,50"
+                   TextColor="DarkSlateGray"
+                   FontSize="17"
+                   FontAttributes="Bold"></Label>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center" 
+                         Spacing="10" 
+                         HeightRequest="50"
+                         Margin="0,0,0,20">
+                <Frame x:Name="EntryFrame1" Style="{StaticResource FrameStyle}" >
+                    <Entry x:Name="NumEntry1" Style="{StaticResource EntryStyle}" TextChanged="Entry_TextChanged1" >
+                        <Entry.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS" Value="60" />
+                                <On Platform=" UWP" Value="60" />
+                            </OnPlatform>
+                        </Entry.WidthRequest>
+
+                    </Entry>
+                </Frame>
+                <Frame  x:Name="EntryFrame2" Style="{StaticResource FrameStyle}" >
+                    <Entry x:Name="NumEntry2"  Style="{StaticResource EntryStyle}" TextChanged="Entry_TextChanged2" >
+                        <Entry.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS" Value="60" />
+                                <On Platform=" UWP" Value="60" />
+                            </OnPlatform>
+                        </Entry.WidthRequest>
+                    </Entry>
+                </Frame>
+                <Frame x:Name="EntryFrame3" Style="{StaticResource FrameStyle}" >
+                    <Entry x:Name="NumEntry3"  Style="{StaticResource EntryStyle}" TextChanged="Entry_TextChanged3">
+                        <Entry.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS" Value="60" />
+                                <On Platform=" UWP" Value="60" />
+                            </OnPlatform>
+                        </Entry.WidthRequest>
+                    </Entry>
+                </Frame>
+                <Frame  x:Name="EntryFrame4" Style="{StaticResource FrameStyle}" >
+                    <Entry x:Name="NumEntry4"  Style="{StaticResource EntryStyle}" TextChanged="Entry_TextChanged4" >
+                        <Entry.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS" Value="60" />
+                                <On Platform=" UWP" Value="60" />
+                            </OnPlatform>
+                        </Entry.WidthRequest>
+                    </Entry>
+                </Frame>
+            </StackLayout>
+            <Button Style="{StaticResource GreenBtn}" 
+                    Text="تایید"
+                    Padding="10"
+                    Command="{Binding ApproveCommand}"></Button>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:res="clr-namespace:XamApp.Resources"
+             x:Class="XamApp.Views.SettingView">
+    
+    <ContentPage.Resources>
+        <Style x:Key="DarkTextLableStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+            <Setter Property="TextColor" Value="DarkSlateGray"></Setter>
+            <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+            <Setter Property="FlowDirection" Value="RightToLeft"></Setter>
+        </Style>
+        <Style x:Key="LightTextLableStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+            <Setter Property="TextColor" Value="DarkGray"></Setter>
+            <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+            <Setter Property="FlowDirection" Value="RightToLeft"></Setter>
+        </Style>
+        <Style x:Key="FrameStyle"  TargetType="Frame">
+            <Setter Property="BorderColor" Value="SkyBlue"></Setter>
+            <Setter Property="CornerRadius" Value="5"></Setter>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Spacing="3">
+            
+            <FlexLayout Direction="Row" HorizontalOptions="CenterAndExpand" AlignContent="Center" Margin="10">
+                <ImageButton Source="{res:ImageResource XamApp.Resources.drawable.Back.PNG}"
+                             FlexLayout.AlignSelf ="End"
+                             Command="{Binding GoBackCommand}"></ImageButton>
+                <Label Text="سرویس های تکمیل شده" Style="{StaticResource DarkTextLableStyle}"
+                       HorizontalOptions="Center" 
+                       FlexLayout.AlignSelf ="Center"
+                       FlexLayout.Grow="1"
+                       HorizontalTextAlignment="Center"/>
+            </FlexLayout>
+
+            <BoxView Color="LightGray" HeightRequest="1"></BoxView>
+            
+            <ScrollView Orientation="Horizontal" FlowDirection="RightToLeft">
+                <Grid ColumnSpacing="30" RowSpacing="3" FlowDirection="RightToLeft">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image Source="{res:ImageResource XamApp.Resources.drawable.BlueCircle.png}" Grid.Column="0" Grid.Row ="0">
+                        <Image.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.WidthRequest>
+                        <Image.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.HeightRequest>
+                    </Image>
+                    <Image Source="{res:ImageResource XamApp.Resources.drawable.PinkCircle.png}" Grid.Column="1" Grid.Row ="0">
+                        <Image.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.WidthRequest>
+                        <Image.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.HeightRequest>
+                    </Image>
+                    <Image Source="{res:ImageResource XamApp.Resources.drawable.GreenCircle.png}" Grid.Column="2" Grid.Row ="0">
+                        <Image.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.WidthRequest>
+                        <Image.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.HeightRequest>
+                    </Image>
+                    <Image Source="{res:ImageResource XamApp.Resources.drawable.yellowCircle.png}" Grid.Column="3" Grid.Row ="0">
+                        <Image.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.WidthRequest>
+                        <Image.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.HeightRequest>
+                    </Image>
+                    <Image Source="{res:ImageResource XamApp.Resources.drawable.OrangeCircle.png}" Grid.Column="4" Grid.Row ="0">
+                        <Image.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.WidthRequest>
+                        <Image.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.HeightRequest>
+                    </Image>
+                    <Image Source="{res:ImageResource XamApp.Resources.drawable.BlueCircle.png}" Grid.Column="5" Grid.Row ="0">
+                        <Image.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.WidthRequest>
+                        <Image.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android,iOS,UWP" Value="60" />
+                            </OnPlatform>
+                        </Image.HeightRequest>
+                    </Image>
+
+                    <Label Text="خودم" Style="{StaticResource DarkTextLableStyle}" Grid.Column="0" Grid.Row="1"></Label>
+                    <Label Text="مرتضی" Style="{StaticResource LightTextLableStyle}" Grid.Column="1" Grid.Row="1"></Label>
+                    <Label Text="علی" Style="{StaticResource LightTextLableStyle}" Grid.Column="2" Grid.Row="1"></Label>
+                    <Label Text="احمد" Style="{StaticResource LightTextLableStyle}" Grid.Column="3" Grid.Row="1"></Label>
+                    <Label Text="رضا" Style="{StaticResource LightTextLableStyle}" Grid.Column="4" Grid.Row="1"></Label>
+                    <Label Text="محمد" Style="{StaticResource LightTextLableStyle}" Grid.Column="5" Grid.Row="1"></Label>
+                </Grid>
+            </ScrollView>
+            
+            <BoxView Color="LightGray" HeightRequest="1" Opacity="80"></BoxView>
+           
+            <StackLayout Orientation="Horizontal" Margin="0,10,0,0" FlowDirection="RightToLeft">
+                <Image Source="{res:ImageResource XamApp.Resources.drawable.Notifications.PNG}">
+                    <Image.WidthRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android,iOS,UWP" Value="20" />
+                        </OnPlatform>
+                    </Image.WidthRequest>
+                    <Image.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android,iOS,UWP" Value="20" />
+                        </OnPlatform>
+                    </Image.HeightRequest>
+                </Image>
+                <Label Text="اعلان ها" Style="{StaticResource LightTextLableStyle}" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+            
+            <Frame Style="{StaticResource FrameStyle}" Margin="10" HasShadow="True">
+              
+                <StackLayout Orientation="Vertical">
+                   
+                    <FlexLayout Direction="Row" FlowDirection="RightToLeft" Margin="10">
+                            <Switch FlowDirection="LeftToRight" OnColor="MediumPurple" IsToggled="True"></Switch>
+                        <Label Style="{StaticResource DarkTextLableStyle}" 
+                               FlexLayout.Grow="1"
+                               Text="اعلان رسیدن سرویس دهنده به مسیر"></Label>
+                    </FlexLayout>
+                    
+                    <BoxView Color="SkyBlue" HeightRequest="1"></BoxView>
+                   
+                    <FlexLayout Direction="Row" FlowDirection="RightToLeft" Margin="10">
+                        <Switch  FlowDirection="LeftToRight"
+                                OnColor="MediumPurple"></Switch>
+
+                        <Label Style="{StaticResource LightTextLableStyle}" 
+                               FlexLayout.Grow="1"
+                               Text="سایر اعلان ها"></Label>
+
+                    </FlexLayout>
+                    
+                </StackLayout>
+                
+            </Frame>
+            
+            <Frame Style="{StaticResource FrameStyle}" Margin="10" HasShadow="True">
+                
+                <StackLayout>
+                    <Grid FlowDirection="RightToLeft" ColumnSpacing="5" RowSpacing="5" Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="{res:ImageResource  XamApp.Resources.drawable.people.png}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+                            <Image.WidthRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android,iOS,UWP" Value="50" />
+                                </OnPlatform>
+                            </Image.WidthRequest>
+                            <Image.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android,iOS,UWP" Value="50" />
+                                </OnPlatform>
+                            </Image.HeightRequest>
+                        </Image>
+                        <Label Text="ویرایش حساب کاربری" Style="{StaticResource DarkTextLableStyle}" Grid.Column="1" Grid.Row="0" ></Label>
+                        <Label Text="ویرایش عکس، ایمیل و تمام اطلاعات حساب شما" Style="{StaticResource LightTextLableStyle}" Grid.Column="1" Grid.Row="1" ></Label>
+                    </Grid>
+
+                    <BoxView Color="SkyBlue" HeightRequest="1" ></BoxView>
+
+                    <Grid FlowDirection="RightToLeft" ColumnSpacing="5" RowSpacing="5" Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="{res:ImageResource  XamApp.Resources.drawable.info.png}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+                            <Image.WidthRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android,iOS,UWP" Value="50" />
+                                </OnPlatform>
+                            </Image.WidthRequest>
+                            <Image.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android,iOS,UWP" Value="50" />
+                                </OnPlatform>
+                            </Image.HeightRequest>
+                        </Image>
+                        <Label Text="درباره ما" Style="{StaticResource DarkTextLableStyle}" Grid.Column="1" Grid.Row="0"></Label>
+                        <Label Text="درباره اپلیکیشن" Style="{StaticResource LightTextLableStyle}" Grid.Column="1" Grid.Row="1" ></Label>
+                    </Grid>
+
+                    <BoxView Color="SkyBlue" HeightRequest="1"></BoxView>
+
+                    <Grid FlowDirection="RightToLeft" ColumnSpacing="5" RowSpacing="5" Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="{res:ImageResource  XamApp.Resources.drawable.off.png}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+                            <Image.WidthRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android,iOS,UWP" Value="50" />
+                                </OnPlatform>
+                            </Image.WidthRequest>
+                            <Image.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="Android,iOS,UWP" Value="50" />
+                                </OnPlatform>
+                            </Image.HeightRequest>
+                        </Image>
+                        <Label Text="خروج از حساب کاربری" Style="{StaticResource DarkTextLableStyle}" Grid.Column="1" Grid.Row="0"></Label>
+                        <Label Text="خداحافظی سخت ولی گاهی لازم است" Style="{StaticResource LightTextLableStyle}" Grid.Column="1" Grid.Row="1" ></Label>
+                    </Grid>
+                    
+                </StackLayout>
+                
+            </Frame>
+
+            <Frame Style="{StaticResource FrameStyle}" Margin="10" HasShadow="True">
+                <FlexLayout Direction="Row" FlowDirection="RightToLeft" Margin="10">
+                    <Switch FlowDirection="LeftToRight" OnColor="MediumPurple" ></Switch>
+                    <Label Style="{StaticResource DarkTextLableStyle}" 
+                           FlexLayout.Grow="1"
+                           Text="اعلان رسیدن سرویس دهنده به مسیر"></Label>
+                </FlexLayout>
+            </Frame>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
